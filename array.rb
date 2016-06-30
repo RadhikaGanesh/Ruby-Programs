@@ -42,10 +42,10 @@ class Arrays
     	puts a
     	puts "****************************************"," reject function","****************************************"
     	puts a.reject{|i| i.odd?}
-    	puts "****************************************"," keep if function","****************************************"
-    	puts a.keep if{|i| i.even}
-    	puts "****************************************"," keep if function","****************************************"
-    	puts a.unique
+    	#puts "****************************************"," keep if function","****************************************"
+    	#puts a.keep if |i| i.even
+    	puts "****************************************"," uniq function","****************************************"
+    	puts a.uniq
     	puts "******************************************"
     end
 
@@ -57,3 +57,4 @@ a1.print_range_as_array
 a1.inserting_values_into_array_1
 a1.inserting_values_into_array_2
 a1.sort_array
+a1.inbuilt_functions
