@@ -60,8 +60,15 @@ class Arrays
     	puts "hash a is",a
     	puts"now the hash a contains"
     	a.each do |k,v|
-    		puts "deleted key a","value of #{k} is #{v}"
+    		puts "deleted key a","value of #{k} is #{v}", "******************************************"
     	end
+    end
+    def bang
+    	a = "ABCD"
+    	puts "downcase of a is ", a.downcase
+    	puts "after working downcase a is", a , "******************************************"
+    	puts "downcase! of a is ", a.downcase!
+    	puts "after working downcase! a is ", a ,"******************************************"
     end
 
 end
@@ -76,3 +83,4 @@ a1.sort_array
 a1.inbuilt_functions
 a1.hash_kv
 a1.hash_loop
+a1.bang
