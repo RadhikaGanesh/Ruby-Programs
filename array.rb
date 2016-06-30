@@ -42,14 +42,30 @@ class Arrays
     	puts a
     	puts "****************************************"," reject function","****************************************"
     	puts a.reject{|i| i.odd?}
-    	#puts "****************************************"," keep if function","****************************************"
-    	#puts a.keep if |i| i.even
+    	puts "****************************************"," keep if function","****************************************"
+    	puts a.keep_if{|i| i.odd?}
     	puts "****************************************"," uniq function","****************************************"
     	puts a.uniq
     	puts "******************************************"
     end
+    def hash_kv
+    	a = {a:10 , "a" => 20 , "b" => 30}
+    	puts "******************************************","hash","******************************************"
+    #	puts " a = #{a['a:']}"
+    	puts "value of key a = #{a['a']}" ,"value of key b = #{a['b']}", "******************************************"
+    end
+    def hash_loop
+    	a = {"a" => 1, "b" => 2,"c" => 3}
+    	a.delete("a")
+    	puts "hash a is",a
+    	puts"now the hash a contains"
+    	a.each do |k,v|
+    		puts "deleted key a","value of #{k} is #{v}"
+    	end
+    end
 
 end
+
 
 a1 = Arrays.new
 a1.print_range
@@ -58,3 +74,5 @@ a1.inserting_values_into_array_1
 a1.inserting_values_into_array_2
 a1.sort_array
 a1.inbuilt_functions
+a1.hash_kv
+a1.hash_loop
